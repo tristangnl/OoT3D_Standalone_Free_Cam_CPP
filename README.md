@@ -19,7 +19,6 @@ This project allows 3DS(old and new) systems and Citra to control the camera in 
 
 This project still lacks several features that may be added in the future.
 
-* Further version support (KOR/TWN)
 * Improved UI & retained settings
 * Improved collision checks
 * free camera when riding epona
@@ -38,7 +37,7 @@ This project still lacks several features that may be added in the future.
 * Shoutouts to the whole OoT3DR dev team for being cool people and the community for keeping me motivated
 
 # How to Use:
-* Find the patch files inside the "[Patch Files](https://github.com/tristangnl/OoT3D_Standalone_Free_Cam_CPP/releases/download/CPP-ZR-ZL/Patch.Files.zip)" folder in this repository. They're divided by regional version of OoT3D (USA/EUR/JP) and by platform (3DS/Citra), so choose the correct ones.
+* Find the patch files inside the "[Patch Files](https://github.com/tristangnl/OoT3D_Standalone_Free_Cam_CPP/releases/download/CPP-ZR-ZL/Patch.Files.zip)" folder in this repository. They're divided by regional version of OoT3D (USA/EUR/JP/TWN/KOR) and by platform (3DS/Citra), so choose the correct ones.
 
 ##### 7 versions are available based on 3 features :
 - rightstick : Circle Pad Pro + ZR/ZL/R on old 3ds | C-Stick + ZR/ZL on new 3ds
@@ -59,6 +58,8 @@ This project still lacks several features that may be added in the future.
 | USA | /luma/titles/0004000000033500 |
 | JP  | /luma/titles/0004000000033400 |
 | EUR | /luma/titles/0004000000033600 |
+| TWN | /luma/titles/000400000008F900 |
+| KOR | /luma/titles/000400000008F800 |
 
 * Hold Select while powering on the console to launch the Luma3DS menu. Turn on "Enable game patching". You should only need to do this once, unless if you disable game patching in the future.
 * It should work now! If not, you likely need to use a different version of Luma3DS.
@@ -88,4 +89,4 @@ Press ZR to connect the Circle Pad Pro to the 3DS, and make sure it has enough b
 # Build
 
 Use the ```makeAll.sh``` script to build all the patches: ```sh makeAll.sh```.
-You can specify a region (EUR, JP, USA): ```sh makeAll.sh USA```.
+You can specify a region (EUR, JP, USA, TWN, KOR): ```sh makeAll.sh USA```.

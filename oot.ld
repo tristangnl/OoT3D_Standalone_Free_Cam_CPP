@@ -9,7 +9,7 @@ SECTIONS
 	}
 
 	.patch_CameraUpdate 0x2D84C8 : {
-	    * (.patch_CameraUpdate)
+	    *(.patch_CameraUpdate)
 	}
 
 	.patch_before_GlobalContext_Update 0x452390 : {
@@ -28,10 +28,10 @@ SECTIONS
 
 	. = 0x005C7000;
 	.text : {
-		__text_start = . ;
+		__text_start = .;
 		*(.text)
 		*(.text.*)
-		__text_end  = . ;
+		__text_end = .;
 		*(.rodata)
 		*(.rodata.*)
 		*(.data)

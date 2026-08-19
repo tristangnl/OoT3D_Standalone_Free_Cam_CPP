@@ -8,25 +8,25 @@ SECTIONS
 		*(.patch_loader)
 	}
 
-	.patch_CameraUpdate 0x2D84C8 : {
-	    *(.patch_CameraUpdate)
+	.patch_CameraUpdate 0x2ED1C8 : {
+		*(.patch_CameraUpdate)
 	}
 
-	.patch_before_GlobalContext_Update 0x4523B0 : {
+	.patch_before_GlobalContext_Update 0x13A1F0 : {
 		*(.patch_before_GlobalContext_Update)
 	}
 
-	.patch_after_GlobalContext_Update 0x452454 : {
+	.patch_after_GlobalContext_Update 0x13A248 : {
 		*(.patch_after_GlobalContext_Update)
 	}
 
-	. = 0x4C99A8;
+	. = 0x4E93FC;
 	. = ALIGN(4);
 	.loader : {
 		*(.loader*)
 	}
 
-	. = 0x005C7000;
+	. = 0x005CE000;
 	.text : {
 		__text_start = .;
 		*(.text)
