@@ -197,12 +197,21 @@ _Static_assert(sizeof(GlobalContext) == 0x5F14, "Global Context size");
 #define real_hid_addr 0x10002000
 #define real_hid (*(hid_mem_t*)real_hid_addr)
 
-#define Z3D_TOP_SCREEN_LEFT_1 0x14313890
-#define Z3D_TOP_SCREEN_LEFT_2 0x14359DA0
-#define Z3D_TOP_SCREEN_RIGHT_1 0x14410AD0
-#define Z3D_TOP_SCREEN_RIGHT_2 0x14456FE0
-#define Z3D_BOTTOM_SCREEN_1 0x143A02B0
-#define Z3D_BOTTOM_SCREEN_2 0x143D86C0
+#if defined(Version_TWN) || defined(Version_KOR)
+    #define Z3D_TOP_SCREEN_LEFT_1 0x1430A900
+    #define Z3D_TOP_SCREEN_LEFT_2 0x14350E10
+    #define Z3D_TOP_SCREEN_RIGHT_1 0x14407DD0
+    #define Z3D_TOP_SCREEN_RIGHT_2 0x1444E2E0
+    #define Z3D_BOTTOM_SCREEN_1 0x14397380
+    #define Z3D_BOTTOM_SCREEN_2 0x143CF790
+#else
+    #define Z3D_TOP_SCREEN_LEFT_1 0x14313890
+    #define Z3D_TOP_SCREEN_LEFT_2 0x14359DA0
+    #define Z3D_TOP_SCREEN_RIGHT_1 0x14410AD0
+    #define Z3D_TOP_SCREEN_RIGHT_2 0x14456FE0
+    #define Z3D_BOTTOM_SCREEN_1 0x143A02B0
+    #define Z3D_BOTTOM_SCREEN_2 0x143D86C0
+#endif
 
 #if defined(Version_TWN) || defined(Version_KOR)
     // The Chinese and Korean executables use a substantially reordered link
