@@ -20,7 +20,7 @@ SECTIONS
 		*(.patch_after_GlobalContext_Update)
 	}
 
-	. = 0x4E93FC;
+	. = 0x4CF3C4;
 	. = ALIGN(4);
 	.loader : {
 		*(.loader*)
