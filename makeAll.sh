@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REGIONS=("EUR" "JP" "USA")
+REGIONS=("EUR" "JP" "USA" "TWN" "KOR")
 
 build() {
     make clean
@@ -40,7 +40,7 @@ if [ -n "$1" ]; then
     done
 
     if [ "$valid" -eq 0 ]; then
-        echo "Invalid region: only available are EUR, JP, USA"
+        echo "Invalid region: only available are EUR, JP, USA, TWN, KOR"
         exit 1
     fi
 

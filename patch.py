@@ -7,7 +7,7 @@ elf = sys.argv[1]
 result = subprocess.run([os.environ["DEVKITARM"] + r'/bin/arm-none-eabi-objdump', '--section-headers', elf], stdout=subprocess.PIPE)
 lines = str(result.stdout).split('\\n')
 sectionsInfo = [line.split()[1:6] for line in lines if line.split() and line.split()[0].isdigit()]
-sections = ((int(sec[2],16), int(sec[4],16), int(sec[1],16)) for sec in sectionsInfo if int(sec[2],16) != 0)
+sections = ((sec[0], int(sec[2],16), int(sec[4],16), int(sec[1],16)) for sec in sectionsInfo if int(sec[2],16) != 0)
 
 
 off = lambda vaddr: struct.pack(">I",vaddr - 0x100000)[1:]
@@ -15,9 +15,13 @@ sz = lambda size: struct.pack(">H", size)
 
 ips = b'PATCH'
 with open(elf, 'rb') as e:
-    for vaddr, offset, size in sections:
+    for name, vaddr, offset, size in sections:
 
-        if vaddr >= 0x4CA000 and vaddr < 0x5C7000: #this is not good lol just trying to avoid __GNU_EH_FRAME_HDR section
+        # The original broad address-range filter avoids linker-generated data,
+        # but valid in-place patches can live in the same range. Always retain
+        # explicitly named patch sections.
+        if (vaddr >= 0x4CA000 and vaddr < 0x5C7000
+                and not name.startswith('.patch_') and name != '.loader'):
             continue
 
         e.seek(offset, 0)

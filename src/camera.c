@@ -7,7 +7,11 @@
 #include "cpp.h"
 #include "3ds/services/apt.h"
 
+#if defined(Version_TWN) || defined(Version_KOR)
+#define GyroDrawHUDIcon *(u8*)0x508A30
+#else
 #define GyroDrawHUDIcon *(u8*)0x4FC648
+#endif
 static s16 pitch = 0, yaw = 0;
 static f32 dist = 0;
 static u8 spdOpt = 3, speed = 6, controls = 0, alertSpd = 0, alertCtr = 0;
