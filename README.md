@@ -15,7 +15,7 @@ I also recently improved the patch to make it accessible to players who do not h
 [![Demo](demoCPP.gif)](https://www.youtube.com/watch?v=Ai_3MEJ3sHk)
 
 # OoT3D Free Cam
-This project allows 3DS(old and new) systems and Citra to control the camera in The Legend of Zelda: Ocarina of Time 3D with use of the c-stick or the Circle Pad Pro, just like Majora's Mask 3D or with the Dpad and the touchscreen. 
+This project allows 3DS(old and new) systems and Citra/Azahar to control the camera in The Legend of Zelda: Ocarina of Time 3D with use of the c-stick or the Circle Pad Pro, just like Majora's Mask 3D or with the Dpad and the touchscreen. 
 
 This project still lacks several features that may be added in the future.
 
@@ -37,7 +37,7 @@ This project still lacks several features that may be added in the future.
 * Shoutouts to the whole OoT3DR dev team for being cool people and the community for keeping me motivated
 
 # How to Use:
-* Find the patch files inside the "[Patch Files](https://github.com/tristangnl/OoT3D_Standalone_Free_Cam_CPP/releases/download/CPP-ZR-ZL/Patch.Files.zip)" folder in this repository. They're divided by regional version of OoT3D (USA/EUR/JP/TWN/KOR) and by platform (3DS/Citra), so choose the correct ones.
+* Find the patch files inside the "[Patch Files](https://github.com/tristangnl/OoT3D_Standalone_Free_Cam_CPP/releases/download/KOR-TWN/Patch.Files.zip)" folder in this repository. They're divided by regional version of OoT3D (USA/EUR/JP/TWN/KOR) and by platform (3DS/Citra), so choose the correct ones (if you are using Azahar, choose the Citra files).
 
 ##### 7 versions are available based on 3 features :
 - rightstick : Circle Pad Pro + ZR/ZL/R on old 3ds | C-Stick + ZR/ZL on new 3ds
@@ -64,7 +64,7 @@ This project still lacks several features that may be added in the future.
 * Hold Select while powering on the console to launch the Luma3DS menu. Turn on "Enable game patching". You should only need to do this once, unless if you disable game patching in the future.
 * It should work now! If not, you likely need to use a different version of Luma3DS.
 
-### Citra Emulator
+### Citra/Azahar Emulator
 * Right-click on OoT3D from the game list and select "Open Mods Location". Place the patch files ("code.ips" and "exheader.bin") there.
 
 ### In Game Controls
