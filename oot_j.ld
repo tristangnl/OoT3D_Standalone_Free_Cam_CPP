@@ -38,4 +38,8 @@ SECTIONS
         *(.bss)
         *(COMMON)
     }
+
+	/DISCARD/ : {
+		*(.eh_frame*)
+	}
 }
